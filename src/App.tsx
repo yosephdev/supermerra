@@ -424,7 +424,7 @@ const SuperMerraFrisor = () => {
                 </div>
                 <div className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-lg text-center border border-gray-700 hover:border-yellow-400/50 transition-all duration-300 group">
                   <Award className="h-8 w-8 text-yellow-400 mx-auto mb-3 group-hover:scale-110 transition-transform duration-300" />
-                  <div className="text-2xl font-bold text-white mb-1">15+</div>
+                  <div className="text-2xl font-bold text-white mb-1">5+</div>
                   <p className="text-sm text-gray-400">År erfarenhet</p>
                 </div>
                 <div className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-lg text-center border border-gray-700 hover:border-yellow-400/50 transition-all duration-300 group">
