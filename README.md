@@ -189,8 +189,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - **Business**: Super Merra Frisör
 - **Location**: Katrineholm, Sweden
-- **Phone**: [Business Phone]
-- **Email**: [Business Email]
+- **Phone**: 076-282 15 58
+- **Email**: info@supermerra.se
 
 For technical support or questions about the website:
 - Create an issue on GitHub
