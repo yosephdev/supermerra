@@ -410,7 +410,7 @@ const SuperMerraFrisor = () => {
                 Om Merra
               </h2>
               <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-                Med över 15 års erfarenhet inom frisöryrket har Merra skapat Super Merra Frisör för att ge Katrineholms män den bästa möjliga frisörupplevelsen. Varje klippning är en konstform.
+                Med över 5 års erfarenhet inom frisöryrket har Merra skapat Super Merra Frisör för att ge Katrineholms män den bästa möjliga frisörupplevelsen. Varje klippning är en konstform.
               </p>
               <p className="text-lg text-gray-300 mb-8 leading-relaxed">
                 Vår filosofi är enkel: varje kund förtjänar en personlig service och ett resultat som överträffar förväntningarna. Vi kombinerar klassisk frisörkonst med moderna tekniker för att skapa tidlösa stilar.
@@ -704,7 +704,7 @@ const SuperMerraFrisor = () => {
                 <span className="text-xl font-bold">Super Merra Frisör</span>
               </div>
               <p className="text-gray-400 mb-4 max-w-md">
-                Katrineholms ledande herrsalong med över 15 års erfarenhet. Vi erbjuder professionell service i en modern och trivsam miljö.
+                Katrineholms ledande herrsalong med över 5 års erfarenhet. Vi erbjuder professionell service i en modern och trivsam miljö.
               </p>
               <div className="flex gap-4">
                 <a href="#" className="p-2 bg-gray-800 hover:bg-yellow-400 hover:text-black rounded-full transition-all duration-300">
@@ -745,7 +745,7 @@ const SuperMerraFrisor = () => {
               © 2025 Super Merra Frisör. Alla rättigheter förbehållna.
             </p>
             <p className="text-gray-500 text-sm">
-              Herrsalong i Katrineholm - Professionell frisörservice för män sedan 2010
+              Herrsalong i Katrineholm - Professionell frisörservice för män sedan 2020
             </p>
           </div>
         </div>
