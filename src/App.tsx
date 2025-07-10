@@ -1,9 +1,51 @@
 import React, { useState, useEffect } from 'react';
 import { 
-  Phone, MapPin, Clock, Star, Scissors, Users, Award, Menu, X, 
-  Instagram, Facebook, Mail, ArrowRight, CheckCircle, Calendar,
-  MessageCircle, Heart, ChevronLeft, ChevronRight, Play
+  Scissors, 
+  Menu, 
+  X, 
+  Calendar, 
+  ArrowRight, 
+  Star, 
+  CheckCircle, 
+  Users, 
+  Award, 
+  MessageCircle, 
+  Play, 
+  Heart, 
+  ChevronLeft, 
+  ChevronRight, 
+  MapPin, 
+  Phone, 
+  Clock, 
+  Mail, 
+  Instagram, 
+  Facebook 
 } from 'lucide-react';
+
+// Move these before the component declaration
+interface Service {
+  name: string;
+  price: string;
+  description: string;
+  duration: string;
+  popular: boolean;
+}
+
+interface Testimonial {
+  name: string;
+  text: string;
+  rating: number;
+  location: string;
+  image: string;
+}
+
+interface GalleryImage {
+  url: string;
+  title: string;
+  category: string;
+}
+
+type SectionId = 'home' | 'services' | 'about' | 'gallery' | 'testimonials' | 'contact';
 
 const SuperMerraFrisor = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -21,7 +63,8 @@ const SuperMerraFrisor = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const services = [
+  // Then use these types for your arrays
+  const services: Service[] = [
     { 
       name: 'Herrklippning', 
       price: '350 kr', 
@@ -66,7 +109,7 @@ const SuperMerraFrisor = () => {
     }
   ];
 
-  const testimonials = [
+  const testimonials: Testimonial[] = [
     { 
       name: 'Anders Lindström', 
       text: 'Merra är fantastisk! Alltid nöjd med resultatet. Bästa frisören i Katrineholm och omgivning. Rekommenderar varmt!', 
@@ -97,7 +140,7 @@ const SuperMerraFrisor = () => {
     }
   ];
 
-  const galleryImages = [
+  const galleryImages: GalleryImage[] = [
     {
       url: "https://images.unsplash.com/photo-1599351431202-1e0f0137899a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       title: "Modern herrklippning",
@@ -140,7 +183,7 @@ const SuperMerraFrisor = () => {
     }
   ];
 
-  const scrollToSection = (sectionId) => {
+  const scrollToSection = (sectionId: SectionId) => {
     document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
     setIsMenuOpen(false);
   };
@@ -158,6 +201,19 @@ const SuperMerraFrisor = () => {
     const interval = setInterval(nextTestimonial, 5000);
     return () => clearInterval(interval);
   }, []);
+
+  // Define the sections array with proper typing
+  const sections: SectionId[] = ['home', 'services', 'about', 'gallery', 'testimonials', 'contact'];
+
+  // Create a mapping for section names
+  const sectionNames: Record<SectionId, string> = {
+    home: 'Hem',
+    services: 'Tjänster',
+    about: 'Om oss',
+    gallery: 'Galleri',
+    testimonials: 'Omdömen',
+    contact: 'Kontakt'
+  };
 
   if (isLoading) {
     return (
@@ -193,18 +249,13 @@ const SuperMerraFrisor = () => {
             
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-8">
-                {['home', 'services', 'about', 'gallery', 'testimonials', 'contact'].map((section) => (
+                {sections.map((section) => (
                   <button 
                     key={section}
                     onClick={() => scrollToSection(section)} 
                     className="relative hover:text-yellow-400 transition-colors duration-300 group"
                   >
-                    {section === 'home' && 'Hem'}
-                    {section === 'services' && 'Tjänster'}
-                    {section === 'about' && 'Om oss'}
-                    {section === 'gallery' && 'Galleri'}
-                    {section === 'testimonials' && 'Omdömen'}
-                    {section === 'contact' && 'Kontakt'}
+                    {sectionNames[section]}
                     <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-yellow-400 transition-all duration-300 group-hover:w-full"></span>
                   </button>
                 ))}
@@ -225,18 +276,13 @@ const SuperMerraFrisor = () => {
         {isMenuOpen && (
           <div className="md:hidden bg-black/95 backdrop-blur-md animate-slide-down">
             <div className="px-2 pt-2 pb-3 space-y-1">
-              {['home', 'services', 'about', 'gallery', 'testimonials', 'contact'].map((section) => (
+              {sections.map((section) => (
                 <button 
                   key={section}
                   onClick={() => scrollToSection(section)} 
                   className="block w-full text-left px-3 py-2 text-white hover:text-yellow-400 transition-colors duration-300 hover:bg-gray-800/50 rounded-md"
                 >
-                  {section === 'home' && 'Hem'}
-                  {section === 'services' && 'Tjänster'}
-                  {section === 'about' && 'Om oss'}
-                  {section === 'gallery' && 'Galleri'}
-                  {section === 'testimonials' && 'Omdömen'}
-                  {section === 'contact' && 'Kontakt'}
+                  {sectionNames[section]}
                 </button>
               ))}
             </div>
@@ -602,7 +648,7 @@ const SuperMerraFrisor = () => {
                     <Phone className="h-5 w-5 text-yellow-400" />
                     Ring oss
                   </a>
-                  <a href="mailto:info@supermerrafrisor.se" className="flex-1 bg-gray-900 border border-gray-700 hover:border-yellow-400 text-white px-6 py-3 rounded-lg text-center transition-all duration-300 hover:bg-gray-800 flex items-center justify-center gap-2">
+                  <a href="mailto:info@supermerra.se" className="flex-1 bg-gray-900 border border-gray-700 hover:border-yellow-400 text-white px-6 py-3 rounded-lg text-center transition-all duration-300 hover:bg-gray-800 flex items-center justify-center gap-2">
                     <Mail className="h-5 w-5 text-yellow-400" />
                     Mejla
                   </a>
@@ -619,7 +665,7 @@ const SuperMerraFrisor = () => {
                     width="100%"
                     height="100%"
                     style={{ border: 0 }}
-                    allowFullScreen=""
+                    allowFullScreen
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
                     title="Super Merra Frisör Location"
@@ -689,7 +735,7 @@ const SuperMerraFrisor = () => {
                 <li>Prinsgatan 6</li>
                 <li>641 36 Katrineholm</li>
                 <li>076-282 15 58</li>
-                <li>info@supermerrafrisor.se</li>
+                <li>info@supermerra.se</li>
               </ul>
             </div>
           </div>
