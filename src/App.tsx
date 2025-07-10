@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { 
   Scissors, 
   Menu, 
@@ -347,7 +347,7 @@ const SuperMerraFrisor = () => {
               Våra Tjänster
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Professionella frisörtjänster för den moderna mannen med över 15 års erfarenhet
+              Professionella frisörtjänster för den moderna mannen med över 5 års erfarenhet
             </p>
           </div>
           
