@@ -8,6 +8,10 @@
 
 A modern, responsive website for Super Merra Frisör - a professional men's hair salon in Katrineholm, Sweden. Built with React, TypeScript, and Vite for optimal performance and developer experience.
 
+[Try Super Merra Live](https://supermerra.netlify.app/)
+
+![Super Merra Preview](public/supermerra-preview.png)
+
 ## 🌟 Features
 
 - **Modern Design**: Clean, professional interface optimized for barbershop services
@@ -192,9 +196,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **Phone**: 076-282 15 58
 - **Email**: info@supermerra.se
 
-For technical support or questions about the website:
+For questions about the website:
 - Create an issue on GitHub
-- Contact the development team
+- Contact yosephbet@gmail.com
 
 ## 🙏 Acknowledgments
 
@@ -207,4 +211,4 @@ For technical support or questions about the website:
 
 ---
 
-**Super Merra Frisör** - Professional men's grooming services in Katrineholm since [Year]. Quality, tradition, and modern style combined.
+**Super Merra Frisör** - Professional men's grooming services in Katrineholm since 2020. Quality, tradition, and modern style combined.
