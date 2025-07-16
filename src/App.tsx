@@ -669,7 +669,7 @@ const SuperMerraFrisor = () => {
                 <div className="flex justify-center gap-4 mt-6">
                   <a href="https://wa.me/46762821558?text=Hej! Jag skulle vilja boka en tid hos Super Merra Frisör" className="flex items-center gap-2 text-green-400 hover:text-green-300 transition-colors duration-300">
                     <MessageCircle className="h-5 w-5" />
-                    WhatsApp (200+ kunder)
+                    WhatsApp
                   </a>
                   <a href="#" className="flex items-center gap-2 text-yellow-400 hover:text-yellow-300 transition-colors duration-300">
                     <Instagram className="h-5 w-5" />
