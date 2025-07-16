@@ -66,45 +66,38 @@ const SuperMerraFrisor = () => {
   // Then use these types for your arrays
   const services: Service[] = [
     { 
-      name: 'Herrklippning', 
-      price: '350 kr', 
-      description: 'Professionell herrklippning anpassad efter ditt ansikte och livsstil',
+      name: 'Vuxna hårklippning', 
+      price: '250 kr', 
+      description: 'Professionell hårklippning anpassad efter ditt ansikte och livsstil',
       duration: '45 min',
       popular: true
     },
     { 
-      name: 'Skäggtrimning', 
-      price: '250 kr', 
+      name: 'Skägg trimning', 
+      price: '100 kr', 
       description: 'Precision skäggtrimning för den perfekta looken',
+      duration: '15 min',
+      popular: false
+    },
+    { 
+      name: 'Barn klippning', 
+      price: '175 kr', 
+      description: 'Barnvänlig klippning i trygg och rolig miljö',
       duration: '30 min',
       popular: false
     },
     { 
-      name: 'Traditionell Rakning', 
-      price: '300 kr', 
-      description: 'Klassisk rakning med varmt handduk, rakskum och aftershave',
-      duration: '40 min',
-      popular: false
-    },
-    { 
-      name: 'Klippning + Skägg', 
-      price: '550 kr', 
-      description: 'Komplett paket för den moderna mannen - vårt mest populära val',
-      duration: '75 min',
-      popular: true
-    },
-    { 
-      name: 'Styling & Finisering', 
-      price: '150 kr', 
-      description: 'Professionell styling för speciella tillfällen',
-      duration: '20 min',
-      popular: false
-    },
-    { 
-      name: 'Hårvård & Behandling', 
+      name: 'Pensionärer', 
       price: '200 kr', 
-      description: 'Behandling och vård för hårbotten och hår',
-      duration: '30 min',
+      description: 'Specialpris för pensionärer med samma höga kvalitet',
+      duration: '35 min',
+      popular: false
+    },
+    { 
+      name: 'Hårvård och behandling', 
+      price: '150 kr', 
+      description: 'Vårdande behandling för hälsosamt och starkt hår',
+      duration: '25 min',
       popular: false
     }
   ];
@@ -142,6 +135,21 @@ const SuperMerraFrisor = () => {
 
   const galleryImages: GalleryImage[] = [
     {
+      url: "/suppermerra-inside-front.jpg",
+      title: "Vår professionella salon - framsida",
+      category: "Salon"
+    },
+    {
+      url: "/supermerra-inside-back.jpg",
+      title: "Vår professionella salon - baksida",
+      category: "Salon"
+    },
+    {
+      url: "/supermerra-outside.jpg",
+      title: "Super Merra Frisör - utsida",
+      category: "Salon"
+    },
+    {
       url: "https://images.unsplash.com/photo-1599351431202-1e0f0137899a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       title: "Modern herrklippning",
       category: "Klippning"
@@ -150,11 +158,6 @@ const SuperMerraFrisor = () => {
       url: "https://images.unsplash.com/photo-1621605815971-fbc98d665033?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       title: "Professionell skäggtrimning",
       category: "Skägg"
-    },
-    {
-      url: "https://images.unsplash.com/photo-1585747860715-2ba37e788b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      title: "Vår professionella salon",
-      category: "Salon"
     },
     {
       url: "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
@@ -170,16 +173,6 @@ const SuperMerraFrisor = () => {
       url: "https://images.unsplash.com/photo-1605497788044-5a32c7078486?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       title: "Precisionsarbete",
       category: "Klippning"
-    },
-    {
-      url: "https://images.unsplash.com/photo-1562004760-aceed7bb0fe3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      title: "Klassisk barbering",
-      category: "Rakning"
-    },
-    {
-      url: "https://images.unsplash.com/photo-1634449571010-02389ed0f9b0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      title: "Moderna verktyg",
-      category: "Utrustning"
     }
   ];
 
@@ -294,8 +287,8 @@ const SuperMerraFrisor = () => {
       <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img 
-            src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80"
-            alt="Modern barbershop interior"
+            src="/suppermerra-inside-front.jpg"
+            alt="Super Merra Frisör interior"
             className="w-full h-full object-cover"
             style={{ transform: `translateY(${scrollY * 0.5}px)` }}
           />
@@ -410,10 +403,10 @@ const SuperMerraFrisor = () => {
                 Om Merra
               </h2>
               <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-                Med över 5 års erfarenhet inom frisöryrket har Merra skapat Super Merra Frisör för att ge Katrineholms män den bästa möjliga frisörupplevelsen. Varje klippning är en konstform.
+                I hjärtat av Katrineholm erbjuder Super Merra Frisör en fräsch approach till hårstyling, som kombinerar kreativitet med expertis. Kunder kan njuta av ett brett utbud av tjänster, från precisionshårklippningar och livfulla färgbehandlingar till lyxiga blowdrys och elegant balayage.
               </p>
               <p className="text-lg text-gray-300 mb-8 leading-relaxed">
-                Vår filosofi är enkel: varje kund förtjänar en personlig service och ett resultat som överträffar förväntningarna. Vi kombinerar klassisk frisörkonst med moderna tekniker för att skapa tidlösa stilar.
+                Med en barnvänlig miljö och bekväma faciliteter, inklusive närliggande parkering och kollektivtrafik, säkerställer denna salong en härlig upplevelse för alla åldrar.
               </p>
               
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-8">
@@ -458,8 +451,8 @@ const SuperMerraFrisor = () => {
               <div className="relative">
                 <div className="bg-gradient-to-br from-yellow-400/20 to-gray-800/20 p-8 rounded-2xl backdrop-blur-sm border border-gray-700">
                   <img 
-                    src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
-                    alt="Professional barber Merra at work"
+                    src="/supermerra-inside-back.jpg"
+                    alt="Super Merra Frisör salon interior"
                     className="w-full h-80 object-cover rounded-xl shadow-2xl"
                   />
                 </div>
@@ -623,9 +616,7 @@ const SuperMerraFrisor = () => {
                   <div>
                     <p className="font-semibold text-white">Öppettider</p>
                     <div className="text-gray-300">
-                      <p>Måndag - Fredag: 09:00 - 18:00</p>
-                      <p>Lördag: 09:00 - 15:00</p>
-                      <p>Söndag: Stängt</p>
+                      <p>Måndag - Söndag: 10:00 - 19:00</p>
                     </div>
                   </div>
                 </div>
@@ -633,7 +624,7 @@ const SuperMerraFrisor = () => {
               
               <div className="mt-8 space-y-4">
                 <a 
-                  href="https://www.fresha.com/sv/for-business/salon" 
+                  href="https://www.fresha.com/sv/a/super-merra-frisor-katrineholm-prinsgatan-6-qqc3oyks" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="w-full bg-yellow-400 text-black px-8 py-4 rounded-lg text-lg font-semibold hover:bg-yellow-300 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center gap-3 group"
@@ -648,9 +639,9 @@ const SuperMerraFrisor = () => {
                     <Phone className="h-5 w-5 text-yellow-400" />
                     Ring oss
                   </a>
-                  <a href="mailto:info@supermerra.se" className="flex-1 bg-gray-900 border border-gray-700 hover:border-yellow-400 text-white px-6 py-3 rounded-lg text-center transition-all duration-300 hover:bg-gray-800 flex items-center justify-center gap-2">
-                    <Mail className="h-5 w-5 text-yellow-400" />
-                    Mejla
+                  <a href="https://wa.me/46762821558?text=Hej! Jag skulle vilja boka en tid hos Super Merra Frisör" className="flex-1 bg-green-600 hover:bg-green-500 text-white px-6 py-3 rounded-lg text-center transition-all duration-300 flex items-center justify-center gap-2">
+                    <MessageCircle className="h-5 w-5" />
+                    WhatsApp
                   </a>
                 </div>
               </div>
@@ -676,6 +667,10 @@ const SuperMerraFrisor = () => {
                   Centralt beläget på Prinsgatan i Katrineholm. Enkel parkering och nära kollektivtrafik.
                 </p>
                 <div className="flex justify-center gap-4 mt-6">
+                  <a href="https://wa.me/46762821558?text=Hej! Jag skulle vilja boka en tid hos Super Merra Frisör" className="flex items-center gap-2 text-green-400 hover:text-green-300 transition-colors duration-300">
+                    <MessageCircle className="h-5 w-5" />
+                    WhatsApp (200+ kunder)
+                  </a>
                   <a href="#" className="flex items-center gap-2 text-yellow-400 hover:text-yellow-300 transition-colors duration-300">
                     <Instagram className="h-5 w-5" />
                     Instagram
@@ -704,7 +699,7 @@ const SuperMerraFrisor = () => {
                 <span className="text-xl font-bold">Super Merra Frisör</span>
               </div>
               <p className="text-gray-400 mb-4 max-w-md">
-                Katrineholms ledande herrsalong med över 5 års erfarenhet. Vi erbjuder professionell service i en modern och trivsam miljö.
+                Katrineholms frisörsalong som kombinerar kreativitet med expertis. Vi erbjuder professionell service i en barnvänlig och modern miljö med bekväma faciliteter.
               </p>
               <div className="flex gap-4">
                 <a href="#" className="p-2 bg-gray-800 hover:bg-yellow-400 hover:text-black rounded-full transition-all duration-300">
@@ -715,6 +710,9 @@ const SuperMerraFrisor = () => {
                 </a>
                 <a href="tel:076-282-15-58" className="p-2 bg-gray-800 hover:bg-yellow-400 hover:text-black rounded-full transition-all duration-300">
                   <Phone className="h-5 w-5" />
+                </a>
+                <a href="https://wa.me/46762821558?text=Hej! Jag skulle vilja boka en tid hos Super Merra Frisör" className="p-2 bg-gray-800 hover:bg-green-600 hover:text-white rounded-full transition-all duration-300">
+                  <MessageCircle className="h-5 w-5" />
                 </a>
               </div>
             </div>
